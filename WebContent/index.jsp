@@ -3,6 +3,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<style type="text/css">
+	a.high_point_pic{
+		color:#3f444e;
+		float:left;
+	color:#3f444e;
+	font-size:1.3em;
+	text-transform:uppercase;
+	font-weight:600;
+	font-size: 1.1em;
+	margin-top: 6px;
+	}
+	a.high_point_pic:hover{
+		color:#B80000;
+	}
+	
+	body,p{margin: 0;}   
+.parentWrap{   
+    overflow: hidden;   
+}   
+.parent{   
+    margin-right: -20px;   
+    overflow: hidden;   
+}   
+.child{   
+    float: left;   
+    width: 20%;   
+    padding-right: 20px;   
+    box-sizing: border-box;   
+    background-clip: content-box;   
+}   
+	
+</style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,28 +66,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="container">
 	<div class="container_wrap">
-		<div class="header_top">
-		    <div class="col-sm-3 logo"><a href="index.html"><img src="images/logo1.png" alt=""/></a></div>
-		    <div class="col-sm-6 nav">
-			  <ul>
-				 <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="comic"><a href="movie.html"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="movie"><a href="movie.html"> </a> </span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="video"><a href="movie.html"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="game"><a href="movie.html"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="tv"><a href="movie.html"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="more"><a href="movie.html"> </a></span></li>
-			 </ul>
-			</div>
-			<div class="col-sm-3 header_right">
-			   <ul class="header_right_box">
-				 <li><img src="images/p1.png" alt=""/></li>
-				 <li><p><a href="login.html">Carol Varois</a></p></li>
-				 <li class="last"><i class="edit"> </i></li>
-				 <div class="clearfix"> </div>
-			   </ul>
-			</div>
-			<div class="clearfix"> </div>
-	      </div>
+	
+		<%@ include file="header.jsp"%>
+	      
+	      
 	      <div class="slider">
 	   <div class="callbacks_container">
 	      <ul class="rslides" id="slider">
@@ -91,10 +107,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    	</div>
 			    </div>
       </div>
+      
+      
       <div class="content">
-      	<div class="box_1">
-      	 <h1 class="m_2">Featurd Movies</h1>
+      
+		
+		<div class="box_1">
+      	  <a href="#"  class="high_point_pic"><h3><b>高分电影年代走势图</b></h3></a>
       	 <div class="search">
+		    <a href="#" class="high_point_pic"><h5>点击查看我的个性化推荐>></h5></a>
+		</div>
+		<div class="clearfix"> </div>
+		</div>
+		
+		
+		
+		
+      	<!-- <div class="box_1">
+      	 <h1 class="m_2">Featurd Movies</h1>
+      	 <div class="search">搜索框
 		    <form>
 				<input type="text" value="Search..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
 				<input type="submit" value="">
@@ -102,178 +133,204 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 		</div>
-		<div class="box_2">
-			<div class="col-md-5 grid_3">
-			  <div class="row_1">
-			  <div class="col-md-6 grid_4"><a href="single.html">
-				  <div class="grid_2">
-					<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-					<div class="caption1">
-						<ul class="list_3">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4"> </i>
-				    	<p class="m_3">Guardians of the Galaxy</p>
-					</div>
-				   </div>
-				   <div class="grid_2 col_1">
-					<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-					<div class="caption1">
-						<ul class="list_3">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4"> </i>
-				    	<p class="m_3">Guardians of the Galaxy</p>
-					</div>
-				   </div>
-			   </a></div>
-			   <div class="col-md-6 grid_7">
-				   <div class="col_2">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""/></p></li>
-			    			<li>Release Date : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		<div class="m_5"><a href="single.html"><img src="images/pic3.jpg" class="img-responsive" alt=""/></a></div>
-				   </div>
-			 </div>
-			   <div class="clearfix"> </div>
-			   </div>
-			   <div class="row_2">
-			   	<a href="single.html"><img src="images/pic4.jpg" class="img-responsive" alt=""/></a>
-			   </div>
-			</div>
-			<div class="col-md-5 content_right">
-			 <div class="row_3">
-			  <div class="col-md-6 content_right-box"><a href="single.html">
-				<div class="grid_2">
-				<img src="images/pic6.jpg" class="img-responsive" alt=""/>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">Guardians of the Galaxy</p>
-				</div>
-			    </div>
-			   </a></div>
-			   <div class="col-md-6 grid_5"><a href="single.html">
-				<div class="grid_2">
-				<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">Guardians of the Galaxy</p>
-				</div>
-			    </div>
-			   </a></div>
-			   <div class="clearfix"> </div>
-			   </div>
-			   <div class="video">
-			      <iframe width="100%" height="" src="https://www.youtube.com/embed/s1QeoSedWmM" frameborder="0" allowfullscreen></iframe>
-			  </div>
-			  <div class="row_5">
-			  	<div class="col-md-6">
-					<div class="col_2">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		
-				   </div>
-			   </div>
-			   <div class="col-md-6 m_6"><a href="single.html">
-				  <img src="images/pic8.jpg" class="img-responsive" alt=""/>
-			   </a></div>
-			  </div>
-			</div>
-			<div class="col-md-2 grid_6">
-				<div class="m_7"><a href="single.html"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a></div>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">Guardians of the Galaxy</p>
-				</div>
-				<div class="col_2 col_3">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>Rating : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
-			    			<li>Release : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		<div class="m_8"><a href="single.html"><img src="images/pic10.jpg" class="img-responsive" alt=""/></a></div>
-			    </div>
-			</div>
-			<div class="clearfix"> </div>
+		box_1 -->
+		
+		<br/>
+		<!-- 评分榜 -->
+		<div class="box_1">
+      	 <h1 class="m_2">评分榜</h1>
+      	 <div class="search">
+		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
+		<div class="clearfix"> </div>
+		
+		
+		</div>
+		
+		
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic6.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div>  
+		<br/>
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div> 
+		
+		
+		 <div class="clearfix"> </div>
+		
+		<br/>
+		<!-- 票房榜 -->
+		<div class="box_1">
+      	 <h1 class="m_2"s>票房榜</h1>
+      	 <div class="search">
+		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
+		</div>
+		<div class="clearfix"> </div>
+		</div>
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div>  
+		<br/>
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic6.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div> 
+		
+		
+		<div class="clearfix"> </div>
+		
+		<br/>
+		<!-- 吐槽榜 -->
+		<div class="box_1">
+      	 <h1 class="m_2">吐槽榜</h1>
+      	 <div class="search">
+		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
+		</div>
+		<div class="clearfix"> </div>
+		</div>
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div>  
+		<br/>
+		<div class="parentWrap">  
+	   		<div class="parent" style="background-color: #edeff0;">  
+		        <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		        <div class="child">
+		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>    
+		         <div class="child">
+		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+		         <div class="child">
+		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
+		        	<p>spiderman!!!</p>
+		        </div>  
+	    	</div>       
+		</div> 
+		<br/>
+		
+		<!-- box_2 -->
+		
+		
       </div>
    </div>
  </div>
  
-<div class="container"> 
- <footer id="footer">
- 	<div id="footer-3d">
-		<div class="gp-container">
-			<span class="first-widget-bend"></span>
-		</div>		
-	</div>
-    <div id="footer-widgets" class="gp-footer-larger-first-col">
-		<div class="gp-container">
-            <div class="footer-widget footer-1">
-            	<div class="wpb_wrapper">
-					<img src="images/f_logo.png" alt=""/>
-				</div> 
-	          <br>
-	          <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-			  <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
-			 </div>
-			 <div class="footer_box">
-			  <div class="col_1_of_3 span_1_of_3">
-					<h3>Categories</h3>
-					<ul class="first">
-						<li><a href="#">Dance</a></li>
-						<li><a href="#">History</a></li>
-						<li><a href="#">Specials</a></li>
-					</ul>
-		     </div>
-		     <div class="col_1_of_3 span_1_of_3">
-					<h3>Information</h3>
-					<ul class="first">
-						<li><a href="#">New products</a></li>
-						<li><a href="#">top sellers</a></li>
-						<li><a href="#">Specials</a></li>
-					</ul>
-		     </div>
-		     <div class="col_1_of_3 span_1_of_3">
-					<h3>Follow Us</h3>
-					<ul class="first">
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Youtube</a></li>
-					</ul>
-					<div class="copy">
-				      <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-			        </div>
-		     </div>
-		    <div class="clearfix"> </div>
-	        </div>
-	        <div class="clearfix"> </div>
-		</div>
-	</div>
-  </footer>
-</div>		
+<%@ include file="footer.jsp"%>
 
 </body>
 </html>

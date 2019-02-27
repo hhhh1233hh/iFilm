@@ -570,6 +570,17 @@ width: 76%;
 background: none;
 font-style: italic;
 }
+.search form input[type="password"] {
+padding: 3px 0;
+font-weight:500;
+font-size: 1em;
+color:#A6A8AB;
+border:none;
+outline: none;
+width: 76%;
+background: none;
+font-style: italic;
+}
 .search form input[type="submit"] {
 background: url('../images/search.png')no-repeat  3px -2px;
 width: 20px;
@@ -1199,7 +1210,31 @@ background:#fff;
 float: left;
 outline: none;
 }
+.to input[type="password"] {
+padding: 10px;
+width:30%;
+font-size:1.1em;
+
+margin: 10px 0;
+border: none;
+color: #999;
+background:#fff;
+float: left;
+outline: none;
+}
 .text input[type="text"], .text textarea {
+width: 70%;
+font-size: 1.1em;
+margin: 10px 0;
+border: none;
+color: #999;
+outline: none;
+background: #fff;
+height: 120px;
+padding: 10px;
+resize: none;
+}
+.text input[type="password"], .text textarea {
 width: 70%;
 font-size: 1.1em;
 margin: 10px 0;
@@ -1284,6 +1319,14 @@ text-transform: uppercase;
 	padding:10px;
 	-webkit-appearance: none;
 }
+.login-right input[type="password"] {
+	border: 1px solid #E4E4E4;
+	outline-color:#d8232a;
+	width: 100px;
+	font-size:0.8125em;
+	padding:10px;
+	-webkit-appearance: none;
+}
 .login-right input[type="submit"] {
 	background: #d8232a;
 	color: #FFF;
@@ -1338,6 +1381,14 @@ p.cart {
 	font-size:1em;
 }
 .register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+	border: 1px solid #EEE;
+	outline-color:#FF5B36;
+	width: 96%;
+	font-size: 1em;
+	padding: 0.5em;
+	-webkit-appearance: none;
+}
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"] {
 	border: 1px solid #EEE;
 	outline-color:#FF5B36;
 	width: 96%;
@@ -1618,7 +1669,13 @@ h1.recent {
 .to input[type="text"] {
 	width: 45%;
 }
+.to input[type="password"] {
+	width: 45%;
+}
 .text input[type="text"], .text textarea {
+	width: 100%;
+}
+.text input[type="password"], .text textarea {
 	width: 100%;
 }
 .form-submit1 input[type="submit"] {
@@ -1684,6 +1741,9 @@ h2.m_3 {
 	margin: 2em 0 0;
 }
 .to input[type="text"] {
+	width: 48%;
+}
+.to input[type="password"] {
 	width: 48%;
 }
 }
