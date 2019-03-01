@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
+<title>登录</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Movie_store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -17,6 +17,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.useso.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<script>
+alert("注册成功！您的id是：")//将用户id显示给用户
+</script>
 <div class="container">
 	<div class="container_wrap">
 	
@@ -33,13 +36,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  	<h3>已经注册过的用户</h3>
 				<p>如果你已经有一个我们的账户，请登录！</p>
 				<form action="UserLogin" method="post">
-				  <div>
+				  <div class="register-top-grid">
 					<span>ID<label>*</label></span>
-					<input type="text" name="username"> 
+					<input type="text" name="userid"> 
 				  </div>
-				  <div>
+				  <div class="register-top-grid">
 					<span>密码<label>*</label></span>
-					<input type="text" name="password"> 
+					<input type="password" name="password"> 
 				  </div>
 				  <a class="forgot" href="#">忘记密码？</a>
 				  <input type="submit" value="登录">

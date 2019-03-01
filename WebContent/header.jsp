@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>header</title>
 </head>
 <body>
 
@@ -14,22 +14,38 @@
 		    <div class="col-sm-6 nav">
 			  <ul>
 				 <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="首页"><a href="index.jsp"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="分类"><a href="movie.jsp"> </a> </span></li>
+				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="全部电影"><a href="movies.jsp"> </a> </span></li>
 				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="搜索"><a href="single.jsp"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="个人中心"><a href="movie.html"> </a></span></li>
-				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="联系我们"><a href="movie.html"> </a></span></li>
+				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="个人中心"><a href="user.jsp"> </a></span></li>
+				 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="联系我们"><a href="info.jsp"> </a></span></li>
 			 </ul>
 			</div>
-			<div class="col-sm-3 header_right">
-			   <ul class="header_right_box">
-				 <li><p><a href="register.jsp">注册</a></p></li>
-				 <li><p><a href="login.jsp">登录</a></p></li>
-				 <li class="last"><i class="edit"> </i></li>
+			<div class="col-sm-3 header_right" >
+			   <ul class="header_right_box" >
+			   
+				 <li style="float:right"><p><a href="register.jsp">注册</a> <a href="login.jsp">登录</a></p></li>
+			
+
+		
 				 <div class="clearfix"> </div>
+				 
 			   </ul>
+			   
 			</div>
+			
+           <!-- 搜索框 -->
+			<div class="search" style="margin:12px 0px">
+		    <form>
+				<input type="text" value="请输入电影名称..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+				<input type="submit" value="">
+		    </form>
+		</div>
+		
 			<div class="clearfix"> </div>
+			
 	      </div>
+      	
+		
 	      
 	      
 </body>

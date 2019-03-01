@@ -38,7 +38,7 @@
 </style>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Home</title>
+<title>首页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Movie_store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -113,9 +113,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       
 		
 		<div class="box_1">
-      	  <a href="#"  class="high_point_pic"><h3><b>高分电影年代走势图</b></h3></a>
+      	  <a href="high_point_pic.jsp"  class="high_point_pic"><h3><b>高分电影年代走势图</b></h3></a>
       	 <div class="search">
-		    <a href="#" class="high_point_pic"><h5>点击查看我的个性化推荐>></h5></a>
+		    <a href="recommend.jsp" class="high_point_pic"><h5>点击查看我的个性化推荐>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	 <h1 class="m_2">评分榜</h1>
       	 <div class="search">
-		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="pingfenall.jsp" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		
@@ -151,24 +151,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>评分</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic6.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 	    	</div>       
 		</div>  
@@ -176,26 +181,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>评分</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
-	    	</div>       
+	    	</div>        
 		</div> 
 		
 		
@@ -206,31 +216,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	 <h1 class="m_2"s>票房榜</h1>
       	 <div class="search">
-		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="piaofangall.jsp" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>票房</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 	    	</div>       
 		</div>  
@@ -238,24 +253,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>票房</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic6.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>票房</center></font>
 		        </div>  
 	    	</div>       
 		</div> 
@@ -268,31 +288,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	 <h1 class="m_2">吐槽榜</h1>
       	 <div class="search">
-		   	<a href="#" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="tucaoall.jsp" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>评分</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 	    	</div>       
 		</div>  
@@ -300,26 +325,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
+				<p><center>名称111</center></p>
+				<font color="orange"><center>评分</center></font>
 		        </div>  
 		        <div class="child">
-		        	<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic9.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>    
 		         <div class="child">
-		        	<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
 		         <div class="child">
-		        	<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-		        	<p>spiderman!!!</p>
+		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
+		        	<p><center>名称111</center></p>
+		        	<font color="orange"><center>评分</center></font>
 		        </div>  
-	    	</div>       
+	    	</div>        
 		</div> 
 		<br/>
 		

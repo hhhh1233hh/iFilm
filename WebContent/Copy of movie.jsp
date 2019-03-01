@@ -12,32 +12,28 @@ font:12px verdana, arial, sans-serif; /* 设置文字大小和字体样式 */
 .menu, .menu li {
 float:left;
 list-style:none; /* 将默认的列表符号去掉 */
-padding:0px; /* 将默认的内边距去掉 */
-margin:0px; /* 将默认的外边距去掉 */
+padding:0; /* 将默认的内边距去掉 */
+margin:0; /* 将默认的外边距去掉 */
 }
 
 .menu li a {
 display:block; /* 将链接设为块级元素 */
-width:60px; /* 设置宽度 */
+width:150px; /* 设置宽度 */
 height:30px; /* 设置高度 */
 line-height:30px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
 text-align:center; /* 居中对齐文字 */
-background:#edeff0; /* 设置背景色 */
-color:#000; /* 设置文字颜色 */
+background:#3A4953; /* 设置背景色 */
+color:#fff; /* 设置文字颜色 */
 text-decoration:none; /* 去掉下划线 */
-border-right:1px solid #909ca2; /* 在左侧加上分隔线 */
+border-right:8px solid #fff; /* 在左侧加上分隔线 */
 }
 
 .menu li a:hover {
-background:#d8232a; /* 变换背景色 */
+background:#146C9C; /* 变换背景色 */
 color:#fff; /* 变换文字颜色 */
 }
 .menu li a.last {
 border-right:0; /* 去掉左侧边框 */
-}
-.title{
-font-size:18px;
-color:#909ca2;
 }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,82 +55,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- ================================================================= -->
-<div style="width:80%;height:200px;margin:0 auto">
+<div style="width:100%">
 <ul class="menu">
-<li class="title">类型：</li>
- <li><a href="http://www.baidu.com">全部</a></li>
- <li><a href="http://www.baidu.com">爱情</a></li>
- <li><a href="http://www.Code52.Net">喜剧</a></li>
- <li><a href="http://www.Code52.Net">动画</a></li>
- <li><a href="http://www.Code52.Net">剧情</a></li>
- <li><a href="http://www.yahoo.com">恐怖</a></li>
- <li><a href="http://www.yahoo.com">惊悚</a></li>
- <li><a href="http://www.yahoo.com">科幻</a></li>
- <li><a href="http://www.yahoo.com">动作</a></li>
- <li><a href="http://www.yahoo.com">悬疑</a></li>
- <li><a href="http://www.yahoo.com">犯罪</a></li>
- <li><a href="http://www.yahoo.com">冒险</a></li>
- <li><a href="http://www.yahoo.com">战争</a></li>
- <li><a href="http://www.yahoo.com">奇幻</a></li>
- <li><a href="http://www.yahoo.com">运动</a></li>
- <li><a href="http://www.yahoo.com">家庭</a></li>
- <li><a href="http://www.yahoo.com">古装</a></li>
- <li><a href="http://www.yahoo.com">武侠</a></li>
- <li><a href="http://www.yahoo.com">西部</a></li>
- <li><a href="http://www.yahoo.com">历史</a></li>
- <li><a href="http://www.yahoo.com">传记</a></li>
- <li><a href="http://www.yahoo.com">歌舞</a></li>
- <li><a href="http://www.yahoo.com">黑色电影</a></li>
- <li><a href="http://www.yahoo.com">短片</a></li>
- <li><a href="http://www.yahoo.com">纪录片</a></li>
- <li><a href="http://www.google.com" class="last">其他</a></li>
-</ul>
-
-<hr/>
-<ul class="menu">
-<li class="title">区域 :</li>
- <li><a href="http://www.baidu.com">全部</a></li>
- <li><a href="http://www.Code52.Net">大陆</a></li>
- <li><a href="http://www.Code52.Net">美国</a></li>
- <li><a href="http://www.Code52.Net">韩国</a></li>
- <li><a href="http://www.yahoo.com">日本</a></li>
- <li><a href="http://www.yahoo.com">中国香港</a></li>
- <li><a href="http://www.yahoo.com">中国台湾</a></li>
- <li><a href="http://www.yahoo.com">泰国</a></li>
- <li><a href="http://www.yahoo.com">印度</a></li>
- <li><a href="http://www.yahoo.com">法国</a></li>
- <li><a href="http://www.yahoo.com">英国</a></li>
- <li><a href="http://www.yahoo.com">俄罗斯</a></li>
- <li><a href="http://www.yahoo.com">意大利</a></li>
- <li><a href="http://www.yahoo.com">西班牙</a></li>
- <li><a href="http://www.yahoo.com">德国</a></li>
- <li><a href="http://www.yahoo.com">波兰</a></li>
- <li><a href="http://www.yahoo.com">澳大利亚</a></li>
- <li><a href="http://www.yahoo.com">伊朗</a></li>
- <li><a href="http://www.google.com" class="last">其他</a></li>
+<li>menu</li>
+ <li><a href="http://www.baidu.com">Baidu.Com</a></li>
+ <li><a href="http://www.Code52.Net">Code52.Net</a></li>
+ <li><a href="http://www.yahoo.com">Yahoo.Com</a></li>
+ <li><a href="http://www.google.com" class="last">Google.Com</a></li>
 </ul>
 
 <ul class="menu">
-<li class="title">年代 :</li>
- <li><a href="http://www.baidu.com">全部</a></li>
- <li><a href="http://www.Code52.Net">2019以后</a></li>
- <li><a href="http://www.Code52.Net">2019</a></li>
- <li><a href="http://www.Code52.Net">2018</a></li>
- <li><a href="http://www.Code52.Net">2017</a></li>
- <li><a href="http://www.Code52.Net">2016</a></li>
- <li><a href="http://www.Code52.Net">2015</a></li>
- <li><a href="http://www.Code52.Net">2014</a></li>
- <li><a href="http://www.Code52.Net">2013</a></li>
- <li><a href="http://www.Code52.Net">2012</a></li>
- <li><a href="http://www.Code52.Net">2011</a></li>
- <li><a href="http://www.Code52.Net">2010~2000</a></li>
- <li><a href="http://www.Code52.Net">90年代</a></li>
- <li><a href="http://www.Code52.Net">80年代</a></li>
- <li><a href="http://www.Code52.Net">70年代</a></li>
- <li><a href="http://www.google.com" class="last">更早</a></li>
+<li>menu</li>
+ <li><a href="http://www.baidu.com">Baidu.Com</a></li>
+ <li><a href="http://www.Code52.Net">Code52.Net</a></li>
+ <li><a href="http://www.yahoo.com">Yahoo.Com</a></li>
+ <li><a href="http://www.google.com" class="last">Google.Com</a></li>
 </ul>
-
-
+</div>
 
 
 </div>

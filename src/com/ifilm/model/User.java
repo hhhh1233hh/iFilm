@@ -4,44 +4,56 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password
+		return "User [userid=" + userid + ", username=" + username + ",interest=" + interest + ", password=" + password
 				+ ", gender=" + gender + ", birth=" + birth + ", vip=" + vip
-				+ ", email=" + email + "]";
+				+ ", email=" + email + ", balance=" + balance+"]";
 	}
 
 	public User() {
 
 	}
 	
-	public User(String id, String name, String password, String gender,
-			String birth, String vip, String email) {
+	public User(String userid, String username,String interest, String password, String email,String gender,
+			String birth, String vip, String balance) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.userid = userid;
+		this.username=username;
+		this.interest= interest;
 		this.password = password;
 		this.gender = gender;
 		this.birth = birth;
 		this.vip = vip;
 		this.email = email;
+		this.balance=balance;
 	}
-	public String id;
-	public String name;
+	public String userid;
+	public String username;
+	public String interest;
 	public String password;
-	public String gender;
-	public String birth;
-	public String vip;
 	public String email;
+	public String birth;
+	public String gender;
+	public String vip;
+	public String balance;
 	public String getId() {
-		return id;
+		return userid;
 	}
 	public void setId(String id) {
-		this.id = id;
+		this.userid = id;
+	}
+	public String getInterest() {
+		return interest;
+	}
+	
+	public void setName(String name) {
+		this.username = name;
 	}
 	public String getName() {
-		return name;
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public void setInterest(String interest) {
+		this.interest = interest;
 	}
 	public String getPassword() {
 		return password;
@@ -74,5 +86,10 @@ public class User {
 		this.email = email;
 	}
 	
-	
+	public String getBalance() {
+		return  balance;
+	}
+	public void setBalance(String balance) {
+		this. balance =  balance;
+	}
 }
