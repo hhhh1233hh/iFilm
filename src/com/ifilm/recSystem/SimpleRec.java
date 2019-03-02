@@ -1,6 +1,7 @@
 package com.ifilm.recSystem;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -30,44 +31,47 @@ public class SimpleRec {
 		return ans1;
 	}
 	
-	String[] getTotalScore(String userid) {
-		String sql="select movieid,type from movie where 1=1";
-		List aim=BaseDao.findList(sql);	
-		List<RecScore> ans=new ArrayList();
+	void getTotalScore(String userid) {
+		String sql="select movieid,type,credit,moviename from movie where 1=1";
+		List<Map<String, Object>> aim=BaseDao.findList(sql);	
 		
 		String taglist[]=getTagList(userid);
 		
-		int total=aim.size();
 		
-		double score[]=new double[total];
-		double w=1.0/taglist.length; 
-//		System.out.println(w+"hh");
-//		System.out.println(taglist.length+"hh");
-		
+		List<RecScore> recscore=new ArrayList<RecScore>();
+		double w=1.0/taglist.length; //均权
+
 		for(int i=0;i<aim.size();i++) {
-			Map<String,String> item;
+			double score=0.0;
 			String [] temp;
-			List<String>reclist = new ArrayList<>();
-			Map<String,String> tp=(Map)aim.get(i);			
+			Map<String,String> tp=(Map)aim.get(i);		
 			temp= tp.get("type").split(",");
 			
 			for(int j=0;j<taglist.length;j++) {
 				for(int k=0;k<temp.length;k++) {
-					//if(temp[k].equals(taglist[j]))ans.get(i).get("score")+=w;
-					//else score[i]+=0;
-//					System.out.println(temp[k]);
-//					System.out.println(taglist[j]);
-//					System.out.println("\n");
+					if(temp[k].equals(taglist[j]))score+=w;
+					else score+=0;
 				}
 			}
-			//if(i==1001)System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-			System.out.println(i+"->"+score[i]);
+			String creditbefore=tp.get("credit");
+			double credit=0.0;
+			if(!creditbefore.equals(""))credit=Double.parseDouble(creditbefore);
+			RecScore newitem=new RecScore( String.valueOf(tp.get("movieid")),score,userid,credit,tp.get("moviename"));
+			recscore.add(newitem);
 		}
-		return null;
+		Collections.sort(recscore, new Compares());
+		
+		String sql1 ="INSERT INTO `user_movie` ( `userid`, `movieid`, `moviename`, `rec_score`) VALUES"
+				+ " ( ?, ?, ?,?);"; 
+		
+		for(int i=0;i<20;i++) {
+			BaseDao.updateSql(sql1,userid,recscore.get(i).movieid,recscore.get(i).moviename,String.valueOf(recscore.get(i).score));
+			//System.out.println(recscore.get(i).score+"   "+recscore.get(i).movieid+"     "+i);
+		}
 	}
 	
 	public static void main(String[] args) {
 		SimpleRec rec=new SimpleRec();
-		rec.getTotalScore("1");
+		rec.getTotalScore("1");		
 	}
 }

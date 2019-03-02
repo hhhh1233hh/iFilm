@@ -35,7 +35,7 @@ alert("注册成功！您的id是：")//将用户id显示给用户
 			   <div class="col-md-6 login-right">
 			  	<h3>已经注册过的用户</h3>
 				<p>如果你已经有一个我们的账户，请登录！</p>
-				<form action="UserLogin" method="post">
+				<form action="Login" method="post">
 				  <div class="register-top-grid">
 					<span>ID<label>*</label></span>
 					<input type="text" name="userid"> 

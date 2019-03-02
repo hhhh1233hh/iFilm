@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -101,41 +102,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="parentWrap">
 					<div class="parent" style="background-color: #edeff0;">
-						<div class="child">
-							<a href="single.jsp"><img src="images/pic1.jpg"
-								class="img-responsive" alt="" /></a>
-							<p>
-							<center>名称111</center>
-							</p>
-						</div>
-						<div class="child">
-							<a href="single.jsp"><img src="images/pic7.jpg"
-								class="img-responsive" alt="" /></a>
-							<p>
-							<center>名称</center>
-							</p>
-						</div>
-						<div class="child">
-							<a href="single.jsp"><img src="images/pic9.jpg"
-								class="img-responsive" alt="" /></a>
-							<p>
-							<center>名称</center>
-							</p>
-						</div>
-						<div class="child">
-							<a href="single.jsp"><img src="images/pic2.jpg"
-								class="img-responsive" alt="" /></a>
-							<p>
-							<center>名称</center>
-							</p>
-						</div>
-						<div class="child">
-							<a href="single.jsp"><img src="images/pic1.jpg"
-								class="img-responsive" alt="" /></a>
-							<p>
-							<center>名称</center>
-							</p>
-						</div>
+						<c:choose>
+								<c:when test="${empty requestScope.recommend}">
+									暂时没有推荐信息哦~
+								</c:when>
+								<c:otherwise>
+									<c:forEach items="${requestScope.recommend}" var="m">
+										<div class="child">
+											<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt="" /></a>
+											<p><center>
+												<c:out value="${m.get(moviename)}" />
+											</center></p>
+										</div>
+									</c:forEach> 
+								</c:otherwise>
+							</c:choose>
 					</div>
 				</div>
 				<br />

@@ -66,235 +66,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="container">
 	<div class="container_wrap">
-	
 		<%@ include file="header.jsp"%>
-	      
-	      
-	    
-      
-      
       <div class="content">
-      
-		
-	
-		
-		
-		
-		
-      	<!-- <div class="box_1">
-      	 <h1 class="m_2">Featurd Movies</h1>
-      	 <div class="search">搜索框
-		    <form>
-				<input type="text" value="Search..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
-				<input type="submit" value="">
-		    </form>
-		</div>
-		<div class="clearfix"> </div>
-		</div>
-		box_1 -->
-		
 		<br/>
 		<!-- 评分榜 -->
 		<div class="box_1">
       	 <h1 class="m_2">吐槽榜</h1>
       	 <div class="search">
-		  
 		</div>
 		<div class="clearfix"> </div>
-		
-		
 		</div>
-		
-		
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
+	   		<c:forEach var="movie"   items="movies_tc" begin="0"    end="29"><!-- 要迭代的list：movies_tc； 每一项：movie -->
 		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
+		        <a href="single.jsp"><img src="${link }"
+									class="img-responsive" alt="" /></a>
+				<p><center>${name }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${credit }</center></font>    <!-- 电影评分 -->
 		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
+			</c:forEach> 
 	    	</div>       
 		</div>  
 		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		       <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		       <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		       <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		       <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		       <p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		        <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-		         <div class="child">
-		        		<a href = single.jsp><img src="images/pic1.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center><b>#名称</b></center></p>
-		        	<font color="orange"><center><b>#评分</b></center></center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-	
-		
 		 <div class="clearfix"> </div>
-		
 		<br/>
 		<%@ include file="page03.jsp"%>
-		
 		<!-- box_2 -->
-		
-		
       </div>
    </div>
  </div>

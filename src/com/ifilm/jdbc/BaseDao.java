@@ -124,8 +124,25 @@ public class BaseDao {
 	}
 	
 	public static void main(String[] args) {
-		String sql1 ="insert into movies(name,credit,link,type,abstract,director,actor,year) (select name,credit,link,type,abstract,director,actor,year from my2010_2000) \r\n" + 
-				";"; 
-		updateSql(sql1);
+//		String sql1 ="insert into movies(name,credit,link,type,abstract,director,actor,year) (select name,credit,link,type,abstract,director,actor,year from my2010_2000) \r\n" + 
+//				";"; 
+//		updateSql(sql1);
+		
+		String sql="select movieid from user_movie where userid="+1;
+		List<Map<String, Object>> aim=BaseDao.findList(sql);	//取得用户的推荐影片的所有id
+		
+		List<Map<String, Object>> ans=new ArrayList<Map<String, Object>>();//存放推荐结果
+		
+		for(int i=0;i<aim.size();i++) {
+			Map<String,String> tp=(Map)aim.get(i);
+			String movieid=String.valueOf(tp.get("movieid"));
+			String sql1="select * from movie where movieid="+movieid;
+			Map<String, Object> movieitem=BaseDao.findOne(sql1);//找到一部影片。
+			ans.add(movieitem);
+		}
+		
+		for(int i=0;i<ans.size();i++) {
+			System.out.println(ans.get(i).get("moviename")+"  "+ans.get(i).get("credit"));
+		}
 	}
 }

@@ -66,10 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="container">
 	<div class="container_wrap">
-	
 		<%@ include file="header.jsp"%>
-	      
-	      
 	      <div class="slider">
 	   <div class="callbacks_container">
 	      <ul class="rslides" id="slider">
@@ -115,25 +112,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	  <a href="high_point_pic.jsp"  class="high_point_pic"><h3><b>高分电影年代走势图</b></h3></a>
       	 <div class="search">
-		    <a href="recommend.jsp" class="high_point_pic"><h5>点击查看我的个性化推荐>></h5></a>
+		    <a href="RecommendServlet" class="high_point_pic"><h5>点击查看我的个性化推荐>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
-		
-		
-		
-		
-      	<!-- <div class="box_1">
-      	 <h1 class="m_2">Featurd Movies</h1>
-      	 <div class="search">搜索框
-		    <form>
-				<input type="text" value="Search..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
-				<input type="submit" value="">
-		    </form>
-		</div>
-		<div class="clearfix"> </div>
-		</div>
-		box_1 -->
 		
 		<br/>
 		<!-- 评分榜 -->
@@ -150,63 +132,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
+		        
+	        <c:forEach var="movie"   items="movies_credit" begin="0"    end="9"><!-- 要迭代的list：movies_credit； 每一项：movie -->
+		        
 		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>评分</center></font>
+		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
+				<p><center>${name }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${credit }</center></font>    <!-- 电影评分 -->
 		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
+			</c:forEach>
 	    	</div>       
 		</div>  
 		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>评分</center></font>
-		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-	    	</div>        
-		</div> 
 		
 		
 		 <div class="clearfix"> </div>
@@ -222,67 +159,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
+	   		 <c:forEach var="movie"   items="movies_box" begin="0"    end="9"><!-- 要迭代的list：movies_box； 每一项：movie -->
 		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>票房</center></font>
+		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
+				<p><center>${name }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${box }</center></font>    <!-- 电影票房 -->
 		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
+			</c:forEach>
 	    	</div>       
 		</div>  
 		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>票房</center></font>
-		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>票房</center></font>
-		        </div>  
-	    	</div>       
-		</div> 
-		
-		
 		<div class="clearfix"> </div>
-		
 		<br/>
 		<!-- 吐槽榜 -->
 		<div class="box_1">
@@ -293,63 +180,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 		</div>
 		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
+	   		<div class="parent" style="background-color: #edeff0;"> 
+	   		<c:forEach var="movie"   items="movies_tc" begin="0"    end="9"><!-- 要迭代的list：movies_tc； 每一项：movie -->
 		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>评分</center></font>
+		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
+				<p><center>${name }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${credit }</center></font>    <!-- 电影评分 -->
 		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
+			</c:forEach> 
 	    	</div>       
 		</div>  
 		<br/>
-		<div class="parentWrap">  
-	   		<div class="parent" style="background-color: #edeff0;">  
-		        <div class="child">
-		        <a href="single.jsp"><img src="images/pic1.jpg" class="img-responsive" alt="" /></a>
-				<p><center>名称111</center></p>
-				<font color="orange"><center>评分</center></font>
-		        </div>  
-		        <div class="child">
-		        	<a href="single.jsp"><img src="images/pic2.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic6.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>    
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic7.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-		         <div class="child">
-		        	<a href="single.jsp"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a>
-		        	<p><center>名称111</center></p>
-		        	<font color="orange"><center>评分</center></font>
-		        </div>  
-	    	</div>        
 		</div> 
 		<br/>
 		
