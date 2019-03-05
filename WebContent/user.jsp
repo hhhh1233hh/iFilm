@@ -59,7 +59,12 @@ table, th, td
 		<div class="box_1">
       	 <h1 class="m_2">个人中心</h1>
       	 <div class="search" style="float:right">
-		   	<a onclick="openResult()" href="pingfenall.jsp" class="high_point_pic"><h5>会员服务>></h5></a>
+	      	 <c:if test="${userinfo.get('vip')==0}"> 
+			   	<a onclick="openResult()" class="high_point_pic"><h5>会员服务>></h5></a>
+			 </c:if>
+			 <c:if test="${userinfo.get('vip')==1}"> 
+			   	<a href="vip_service.jsp" class="high_point_pic"><h5>会员服务>></h5></a>
+			 </c:if>
 		</div>
 		</div>
 				<div class="register">
@@ -69,26 +74,31 @@ table, th, td
 						
 						</div>
 							<div>
-								<span>ID：</span> 
+								<span>ID：${userinfo.get("userid")}</span> 
 							</div>
 							<div>
-								<span>昵称：</span> 
+								<span>昵称：${userinfo.get("username")}</span> 
 							</div>
 							<div>
-								<span>性别：</span>
+								<span>性别：${userinfo.get("gender")}</span>
 							</div>
 							<div>
-								<span>生日：</span>
+								<span>生日：${userinfo.get("birth")}</span>
 							</div>
 							<div>
-								<span>权限：</span>
+								<c:if test="${userinfo.get('vip')==0}"> 
+			   						<span>权限：普通用户</span>
+			 					</c:if>
+			 					<c:if test="${userinfo.get('vip')==1}"> 
+			   						<span>权限：vip用户</span>
+			 					</c:if>
 							</div>
 							<div>
-								<span>余额：<button onclick="chongzhi()" style="background-color:#C80000; border: none;  color: white; padding: 3px 12px;text-align: center;
+								<span>余额：${userinfo.get("balance")}<button onclick="chongzhi()" style="background-color:#C80000; border: none;  color: white; padding: 3px 12px;text-align: center;
     text-decoration: none; display: inline-block; font-size:13px; margin: 0px 2px; cursor: pointer;">充值</button></span> 
 							</div>
 							<div>
-								<span>感兴趣的项：<button style="background-color: 	#C80000; border: none;  color: white; padding: 3px 12px;text-align: center;
+								<span>感兴趣的项：${userinfo.get("interest")}<button style="background-color: 	#C80000; border: none;  color: white; padding: 3px 12px;text-align: center;
     text-decoration: none; display: inline-block; font-size:13px; margin: 0px 2px; cursor: pointer;">编辑</button></span> 
 							</div>
 							
@@ -109,23 +119,29 @@ table, th, td
 					<div style="width:100%;">
 					
 					<!--  -->
-						<table style="width:100%;" >
+						<table style="width:100%;" >							
+							<c:choose>
+							<c:when test="${empty requestScope.orders}">
+									您暂时没有消费信息哦~
+							</c:when>
+							<c:otherwise>
 							<tr style="height:30px" >
 								<td>订单号</td>
 								<td>订单类型</td>
 								<td>下单时间</td>
-								<td>金额</td>
-								<td>下单前金额</td>
-								<td>余额</td>
+								<td>消费金额</td>
 							</tr>
+							<c:forEach items="${requestScope.orders}" var="o">
 							<tr style="height:50px" ><!-- select from 数据库... -->
-								<td>订单id</td>
-								<td>订单类型</td>
-								<td>下单时间</td>
-								<td>金额</td>
-								<td>下单前金额</td>
-								<td>余额</td>
+								<td>${o.get("orderid")}</td>
+								<td>${o.get("type")}</td>
+								<td>${o.get("price")}</td>
+								<td>${o.get("time")}</td>
 							</tr>
+							</c:forEach>
+							</c:otherwise>
+							</c:choose>
+							
 						</table>
 							
 							<div class="clearfix"></div>
@@ -140,20 +156,19 @@ function chongzhi()
 var name=prompt("请输入您需要充值的金额","充值金额")
 if (name!=null && name!="")
 {
-document.write("你好，" + name + "！今天过得好吗？")
+window.location.href="ChargeServlet?money="+name;
 }
 }
 
 
-	function openResult(){    /* 绑定事件 */
-		var r = confirm("您还不是会员，充值升级会员？")
-		if (r == true) {
-		window.location.href="user.jsp"
-			document.write("你好，！今天过得好吗？")
-		} else {
-			document.write("你好，小叶叶，今天过得好吗？")
-		}
-	} 
+function openResult(){    /* 绑定事件 */
+	var r = confirm("您还不是会员，充值10元即可升级会员，是否升级？")//跳转后台 扣除余额，修改权限
+	if (r == true) {
+	window.location.href="VipServlet";
+	} else {
+		window.location.href="user.jsp";
+	}
+} 
 </script>
 </body>
 				</div>

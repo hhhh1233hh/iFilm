@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -122,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	 <h1 class="m_2">评分榜</h1>
       	 <div class="search">
-		   	<a href="pingfenall.jsp" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="PingFenAllServlet" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		
@@ -133,12 +134,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
 		        
-	        <c:forEach var="movie"   items="movies_credit" begin="0"    end="9"><!-- 要迭代的list：movies_credit； 每一项：movie -->
+	        <c:forEach var="movie"   items="${requestScope.movies_credit }" begin="0"    end="9"><!-- 要迭代的list：movies_credit； 每一项：movie -->
 		        
 		        <div class="child">
-		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
-				<p><center>${name }</center></p>   <!-- 电影名称 -->
-				<font color="orange"><center>${credit }</center></font>    <!-- 电影评分 -->
+		        <a href="SingleServlet?movieitem=${movie.get('movieid') }"><img style="width:250px;height:289px;" src="${movie.get('link') }" class="img-responsive" alt="" /></a>
+				<p><center>${movie.get('moviename') }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${movie.get('credit') }</center></font>    <!-- 电影评分 -->
 		        </div>  
 			</c:forEach>
 	    	</div>       
@@ -153,41 +154,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="box_1">
       	 <h1 class="m_2"s>票房榜</h1>
       	 <div class="search">
-		   	<a href="piaofangall.jsp" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="PiaoFangAllServlet" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
-	   		 <c:forEach var="movie"   items="movies_box" begin="0"    end="9"><!-- 要迭代的list：movies_box； 每一项：movie -->
-		        <div class="child">
-		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
-				<p><center>${name }</center></p>   <!-- 电影名称 -->
-				<font color="orange"><center>${box }</center></font>    <!-- 电影票房 -->
-		        </div>  
+	   		<ul>
+	   		 <c:forEach var="movie"   items="${requestScope.movies_box }" begin="0"    end="9"><!-- 要迭代的list：movies_box； 每一项：movie -->
+		        <li class="child" style="list-style-type: none">
+		        <a href=""><img style="width:250px;height:289px;" src="${movie.get('link') }" class="img-responsive" alt="" /></a>
+				<p><center>${movie.get('moviename')}</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${movie.get('box') }万</center></font>    <!-- 电影票房 -->
+		        </li>  
 			</c:forEach>
+			</ul>
 	    	</div>       
 		</div>  
 		<br/>
 		<div class="clearfix"> </div>
-		<br/>
+		<br/>+
 		<!-- 吐槽榜 -->
 		<div class="box_1">
       	 <h1 class="m_2">吐槽榜</h1>
       	 <div class="search">
-		   	<a href="tucaoall.jsp" class="high_point_pic"><h5>全部>></h5></a>
+		   	<a href="TuCaoAllServlet" class="high_point_pic"><h5>全部>></h5></a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>
 		<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;"> 
-	   		<c:forEach var="movie"   items="movies_tc" begin="0"    end="9"><!-- 要迭代的list：movies_tc； 每一项：movie -->
+	   		 <c:forEach var="movie"   items="${requestScope.movies_tc }" begin="0"    end="9"><!-- 要迭代的list：movies_tc； 每一项：movie -->
+		        
 		        <div class="child">
-		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
-				<p><center>${name }</center></p>   <!-- 电影名称 -->
-				<font color="orange"><center>${credit }</center></font>    <!-- 电影评分 -->
+		        <a href="SingleServlet?movieitem=${movie.get('movieid') }"><img style="width:250px;height:289px;" src="${movie.get('link') }" class="img-responsive" alt="" /></a>
+				<p><center>${movie.get('moviename') }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${movie.get('credit') }</center></font>    <!-- 电影评分 -->
 		        </div>  
-			</c:forEach> 
+			</c:forEach>
 	    	</div>       
 		</div>  
 		<br/>

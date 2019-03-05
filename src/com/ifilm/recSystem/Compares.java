@@ -13,14 +13,24 @@ public class Compares implements Comparator<RecScore>{
 		if (s1.score<s2.score){
 			return 1;
 		}
+		
 		if (s1.score==s2.score){
-			if (s1.moviescore>s2.moviescore){
+			if (s1.year>s2.year){
 				return -1;
 			}
-			if (s1.moviescore<s2.moviescore){
+			if (s1.year<s2.year){
 				return 1;
 			}
-		}
+			if (s1.year==s2.year){
+				if (s1.moviescore>s2.moviescore){
+					return -1;
+				}
+				if (s1.moviescore<s2.moviescore){
+					return 1;
+				}
+			}
+		}		
+		
 		return 0;
 	}
 }

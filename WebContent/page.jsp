@@ -9,6 +9,8 @@
 <title>分页</title>
 <link rel="stylesheet" href="css/pagination.css">
 </head>
+<div id="pagename" style="display:none;">${param.pagename}</div>
+<div id="pagenum" style="display:none;">${param.pagenum}</div>
 <body>
 <div class="pagination"></div>
 
@@ -17,16 +19,18 @@
 <script type="text/javascript" src="js/underscore.js"></script> 
 <script type="text/javascript" src="js/pagination.build.js"></script> 
 <script type="text/javascript">
+var currnum=document.getElementById("pagenum").innerHTML;
+var currname=document.getElementById("pagename").innerHTML;
 $(document).ready(function () {
 	new pagination({
 		pagination:$('.pagination'),
-		maxPage: 7, //最大页码数,支持奇数，左右对称
+		maxPage: 6, //最大页码数,支持奇数，左右对称
 		startPage: 1,    //默认第一页
-		currentPage: 1,          //当前页码
+		currentPage: currnum,          //当前页码
 		 totalItemCount: 10,    //项目总数,大于0，显示页码总数
-		 totalPageCount: 20,        //总页数
+		 totalPageCount: 10,        //总页数
 		callback:function(pageNum){
-			window.location.href="index.jsp?page="+pageNum;
+			window.location.href=currname+"Servlet?pagenum="+pageNum+"&pagename="+currname;
 
 		}
 	});

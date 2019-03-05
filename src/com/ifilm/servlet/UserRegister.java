@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ifilm.jdbc.BaseDao;
-import com.ifilm.model.User;
+import com.ifilm.recSystem.SimpleRec;
 import com.ifilm.jdbc.DaoUtil;
 /**
  * Servlet implementation class UserRegister
@@ -71,8 +71,11 @@ public class UserRegister extends HttpServlet {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+		SimpleRec rec=new SimpleRec();
+		rec.getTotalScore(userid);		//ÍÆ¼öËã·¨
+		
 		request.setAttribute("userid",userid);
-		response.sendRedirect("login.jsp");
+		request.getRequestDispatcher("register_success.jsp").forward(request, response);
 		
 	}
 //	protected boolean (String info){

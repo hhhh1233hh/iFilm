@@ -78,19 +78,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 				<div class="parentWrap">  
 	   		<div class="parent" style="background-color: #edeff0;">  
-		         <c:forEach var="movie"   items="movies_box" begin="0"    end="29"><!-- 要迭代的list：movies_box； 每一项：movie -->
+		          <c:forEach var="movie"   items="${requestScope.movies_box }" begin="0"    end="29"><!-- 要迭代的list：movies_box； 每一项：movie -->
 		        <div class="child">
-		        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
-				<p><center>${name }</center></p>   <!-- 电影名称 -->
-				<font color="orange"><center>${box }</center></font>    <!-- 电影票房 -->
+		        <a href=""><img style="width:250px;height:289px;" src="${movie.get('link') }" class="img-responsive" alt="" /></a>
+				<p><center>${movie.get('moviename') }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${movie.get('box') }万</center></font>    <!-- 电影票房 -->
 		        </div>  
-			</c:forEach> 
+			</c:forEach>
 	    	</div>       
 		</div>  
 		<br/>
 		 <div class="clearfix"> </div>
 		<br/>
-		<%@ include file="page02.jsp"%>
+		<%@ include file="page.jsp"%>
       </div>
    </div>
  </div>

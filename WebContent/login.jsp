@@ -18,7 +18,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <script>
-alert("注册成功！您的id是：")//将用户id显示给用户
 </script>
 <div class="container">
 	<div class="container_wrap">

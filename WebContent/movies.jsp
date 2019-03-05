@@ -115,9 +115,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<%@ include file="header.jsp"%>
 			<div class="content">
 				<div style="width: 80%; height: 200px; margin: 0 auto">
+				
+				
+				
+				
+				
 					<ul class="menu">
-						<li><a href="http://www.baidu.com"><b>类型：</b></a></li>
-						<li><a href="http://www.baidu.com">全部</a></li>
+						<li><a href=""><b>类型：</b></a></li>
+						<li><a href="MoviesServlet?type=allS">全部</a></li>
 						<li><a href="http://www.baidu.com">爱情</a></li>
 						<li><a href="http://www.Code52.Net">喜剧</a></li>
 						<li><a href="http://www.Code52.Net">动画</a></li>
@@ -212,11 +217,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="parentWrap">
 					<div class="parent" style="background-color: #edeff0;">
-					<c:forEach var="movie"   items="allmovies" begin="0"    end="29"><!-- 要迭代的list：allmovies； 每一项：movie -->
+					<c:forEach var="movie"   items="${requestScope.allmovies}" begin="0"    end="29"><!-- 要迭代的list：allmovies； 每一项：movie -->
 				        <div class="child">
-				        <a href="single.jsp"><img src="${link }" class="img-responsive" alt="" /></a>
-						<p><center>${name }</center></p>   <!-- 电影名称 -->
-						<font color="orange"><center>${type }</center></font>    <!-- 电影评分 -->
+				        <a href="single.jsp"><img style="width:250px;" src="${movie.get('link')}" class="img-responsive" alt="" /></a>
+						<div style="height:100px;">
+						<p><center>${movie.get('moviename')}</center></p>   <!-- 电影名称 -->
+						<font color="orange"><center>${movie.get('credit')}</center></font>    <!-- 电影评分 -->
+						</div>
 				        </div>  
 					</c:forEach>
 					</div>

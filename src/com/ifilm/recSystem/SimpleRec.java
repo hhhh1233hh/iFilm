@@ -31,8 +31,8 @@ public class SimpleRec {
 		return ans1;
 	}
 	
-	void getTotalScore(String userid) {
-		String sql="select movieid,type,credit,moviename from movie where 1=1";
+	public void getTotalScore(String userid) {
+		String sql="select movieid,type,credit,moviename,year from movie where 1=1";
 		List<Map<String, Object>> aim=BaseDao.findList(sql);	
 		
 		String taglist[]=getTagList(userid);
@@ -55,8 +55,9 @@ public class SimpleRec {
 			}
 			String creditbefore=tp.get("credit");
 			double credit=0.0;
+			int year=Integer.parseInt(tp.get("year"));
 			if(!creditbefore.equals(""))credit=Double.parseDouble(creditbefore);
-			RecScore newitem=new RecScore( String.valueOf(tp.get("movieid")),score,userid,credit,tp.get("moviename"));
+			RecScore newitem=new RecScore( String.valueOf(tp.get("movieid")),score,userid,credit,tp.get("moviename"),year);
 			recscore.add(newitem);
 		}
 		Collections.sort(recscore, new Compares());
@@ -64,7 +65,7 @@ public class SimpleRec {
 		String sql1 ="INSERT INTO `user_movie` ( `userid`, `movieid`, `moviename`, `rec_score`) VALUES"
 				+ " ( ?, ?, ?,?);"; 
 		
-		for(int i=0;i<20;i++) {
+		for(int i=0;i<200;i++) {
 			BaseDao.updateSql(sql1,userid,recscore.get(i).movieid,recscore.get(i).moviename,String.valueOf(recscore.get(i).score));
 			//System.out.println(recscore.get(i).score+"   "+recscore.get(i).movieid+"     "+i);
 		}

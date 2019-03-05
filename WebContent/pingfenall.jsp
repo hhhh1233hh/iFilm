@@ -77,26 +77,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="parentWrap">
 					<div class="parent" style="background-color: #edeff0;">
-						<c:forEach var="movie" items="movies_credit" begin="0" end="29">
-							<!-- 要迭代的list：movies_credit； 每一项：movie -->
-
-							<div class="child">
-								<a href="single.jsp"><img src="${link }"
-									class="img-responsive" alt="" /></a>
-								<p>
-								<center>${name }</center>
-								</p>
-								<!-- 电影名称 -->
-								<font color="orange"><center>${credit }</center></font>
-								<!-- 电影评分 -->
-							</div>
-						</c:forEach>
+						<c:forEach var="movie"   items="${requestScope.movies_credit }" begin="0"    end="29"><!-- 要迭代的list：movies_credit； 每一项：movie -->
+		        
+		        <div class="child">
+		        <a href="SingleServlet?movieitem=${movie.get('movieid') }"><img style="width:250px;height:289px;" src="${movie.get('link') }" class="img-responsive" alt="" /></a>
+				<div style="height:70px"><p><center>${movie.get('moviename') }</center></p>   <!-- 电影名称 -->
+				<font color="orange"><center>${movie.get('credit') }</center></font> </div>   <!-- 电影评分 -->
+		        </div>  
+			</c:forEach>
 					</div>
 				</div>
 				<br />
 				<div class="clearfix"></div>
 				<br />
-				<%@ include file="page01.jsp"%>
+				<%@ include file="page.jsp"%>
 				<!-- box_2 -->
 			</div>
 		</div>

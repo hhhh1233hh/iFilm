@@ -26,24 +26,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="grid images_3_of_2">
                         	<div class="movie_image">
 
-                                <img src="images/single.jpg" class="img-responsive" alt=""/>
+                                <img style="width:300px;" src="${movieinfo.get('link')}" class="img-responsive" alt=""/>
                             </div>
                             <div class="movie_rate">
                             	<div class="rating_desc"><p>Your Vote :</p></div>
-                            	<form action="" class="sky-form">
+                            	<form action="EvaluateServlet?thisid=${param.movieitem}" class="sky-form" method="POST">
 							     <fieldset>					
 								   <section>
 								     <div class="rating">
-										<input type="radio" name="stars-rating" id="stars-rating-5">
+										<input type="radio" name="stars-rating5" id="stars-rating-5">
 										<label for="stars-rating-5"><i class="icon-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-4">
+										<input type="radio" name="stars-rating4" id="stars-rating-4">
 										<label for="stars-rating-4"><i class="icon-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-3">
+										<input type="radio" name="stars-rating3" id="stars-rating-3">
 										<label for="stars-rating-3"><i class="icon-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-2">
+										<input type="radio" name="stars-rating2" id="stars-rating-2">
 										<label for="stars-rating-2"><i class="icon-star"></i></label>
-										<input type="radio" name="stars-rating" id="stars-rating-1">
+										<input type="radio" name="stars-rating1" id="stars-rating-1">
 										<label for="stars-rating-1"><i class="icon-star"></i></label>
+										
+										<a href=""><button type="submit" style="background-color: 	#C80000; border: none;  color: white; padding: 3px 12px;text-align: center;
+    text-decoration: none; display: inline-block; font-size:15px; margin: 3px 5px; cursor: pointer;">提交</button></a>
 									 </div>
 								  </section>
 							    </fieldset>
@@ -52,13 +55,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="desc1 span_3_of_2">
-                        	<p class="movie_option"><strong>名称：</strong></p>                       	
-                        	<p class="movie_option"><strong>导演： </strong></p>
-                        	<p class="movie_option"><strong>主演： </strong></p>
-                        	<p class="movie_option"><strong>类型：</strong></p>
-                        	<p class="movie_option"><strong>评分：</strong></p>
-                        	<p class="movie_option"><strong>年代： </strong></p>
-                        		<p class="movie_option"><strong>简介：</strong></p>
+                        	<p class="movie_option"><strong>名称：${movieinfo.get("moviename")}</strong></p>                       	
+                        	<p class="movie_option"><strong>导演：${movieinfo.get("director")} </strong></p>
+                        	<p class="movie_option"><strong>主演： ${movieinfo.get("actor")}</strong></p>
+                        	<p class="movie_option"><strong>类型：${movieinfo.get("type")}</strong></p>
+                        	<p class="movie_option"><strong>评分：${movieinfo.get("credit")}</strong></p>
+                        	<p class="movie_option"><strong>年代：${movieinfo.get("year")} </strong></p>
+                        		<p class="movie_option"><strong>简介：${movieinfo.get("abstract")}</strong></p>
                             
                          </div>
                         <div class="clearfix"> </div>
